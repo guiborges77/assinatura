@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Assinatura de E-mail</title>
+    <style>
+      /* Estilos adicionais para o botão e garantir que a assinatura não tenha fundo */
+      .container-assinatura {
+        border: none; /* Remove borda */
+        padding: 20px; /* Espaçamento interno */
+        max-width: 600px; /* Largura máxima */
+        margin: 0 auto; /* Centraliza na tela */
+      }
+      button {
+        margin-top: 20px; /* Espaço acima do botão */
+        padding: 10px 20px; /* Tamanho do botão */
+        border: none; /* Remove borda */
+        background-color: #6f01e0; /* Cor de fundo do botão */
+        color: white; /* Cor do texto do botão */
+        cursor: pointer; /* Cursor em forma de mão */
+        font-size: 16px; /* Tamanho da fonte */
+      }
+      button:hover {
+        background-color: #5a00b2; /* Cor do botão ao passar o mouse */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <table>
+        <div class="container-assinatura">
+          <section class="setor__1">
+            <div class="foto-perfil">
+              <div class="image-container">
+                <img
+                  src="SELOS AWARDS/foto_default.png"
+                  class="profile-image"
+                  alt="Imagem de Perfil"
+                />
+              </div>
+            </div>
+
+            <div class="div__NSC">
+              <h1 id="nome">Nome Sobrenome</h1>
+              <div class="cargo-container">
+                <h8 id="cargo">Cargo</h8>
+                <hr id="dynamicLine" class="dynamic-hr" />
+              </div>
+              <img
+                class="img__dsop"
+                src="SELOS AWARDS/DSOP_Logo.png"
+                alt="Logo DSOP"
+              />
+              <ul>
+                <li>
+                  <img src="SELOS AWARDS/telefone.png" alt="Telefone" />
+                  <span id="telefone">+55 11 3177-7800</span>
+                </li>
+                <br />
+                <li>
+                  <img src="SELOS AWARDS/email 1.png" alt="E-mail" />
+                  <span id="email">nome.sobrenome@dsop.com.br</span>
+                </li>
+                <br />
+                <li>
+                  <img src="SELOS AWARDS/local 1.png" alt="Endereço" />
+                  Rua Alba, 88 | Parque Jabaquara<br />
+                  São Paulo | SP | 04346-000
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="setor__2">
+            <div class="div__icons">
+              <img src="SELOS AWARDS/instagram.png" alt="Instagram" />
+            </div>
+            <div class="div__icons">
+              <img src="SELOS AWARDS/youtube.png" alt="YouTube" />
+            </div>
+            <div class="div__icons">
+              <img src="SELOS AWARDS/linkedin.png" alt="LinkedIn" />
+            </div>
+            <div class="div__icons">
+              <img src="SELOS AWARDS/facebook.png" alt="Facebook" />
+            </div>
+          </section>
+          <section class="setor__3">
+            <div class="div__coin">
+              <img src="SELOS AWARDS/moeda 2.png" alt="Moeda" />
+            </div>
+            <div class="div__EF">
+              <pre class="pre1">
+Ensinar Educação Financeira 
+para todos faz o mundo melhor.
+                    </pre
+              >
+            </div>
+          </section>
+          <footer>
+            <div class="iso">
+              <p>
+                Empresa certificada <br />
+                pela <b>ISO 9001</b>
+              </p>
+            </div>
+            <div class="div_awards">
+              <img
+                src="SELOS AWARDS/SELO-ABF-2023 1.png"
+                alt="Selo ABF"
+                style="background: lightgray; object-fit: cover"
+              />
+              <img
+                src="SELOS AWARDS/SELO-QUALIDADE 1.png"
+                alt="Selo Qualidade"
+                style="background: lightgray; object-fit: cover"
+              />
+              <img
+                src="SELOS AWARDS/Selo-MEC 1.png"
+                alt="Selo MEC"
+                style="background: lightgray; object-fit: cover"
+              />
+              <img
+                src="SELOS AWARDS/selo salva de prata 1.png"
+                alt="Selo Salva de Prata"
+                style="background: lightgray; object-fit: cover"
+              />
+            </div>
+          </footer>
+          <!-- Botão para copiar assinatura -->
+        </div>
+      </table>
+
+      <!-- Formulário para edição -->
+      <div class="form-container">
+        <h2>Editar Assinatura</h2>
+        <input type="text" id="inputNome" placeholder="Nome Sobrenome" />
+        <input type="text" id="inputCargo" placeholder="Cargo" />
+        <input type="text" id="inputTelefone" placeholder="Telefone" />
+        <input type="text" id="inputEmail" placeholder="E-mail" />
+        <input type="file" id="inputImagem" accept="image/*" />
+        <button onclick="atualizarAssinatura()">Atualizar Assinatura</button>
+        <span id="hiddenSpan" class="hidden-span"></span>
+        <button id="copy-button">Copiar Assinatura</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      // Função para copiar a assinatura
+      document
+        .getElementById("copy-button")
+        .addEventListener("click", function () {
+          const container = document.querySelector(".container-assinatura");
+          // Cria um elemento de div temporário
+          const tempDiv = document.createElement("div");
+          tempDiv.innerHTML = container.innerHTML;
+          document.body.appendChild(tempDiv);
+          // Copia o conteúdo da assinatura
+          const range = document.createRange();
+          range.selectNodeContents(tempDiv);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          // Copia o conteúdo selecionado
+          document.execCommand("copy");
+          document.body.removeChild(tempDiv); // Remove a div temporária
+          // Feedback opcional para o usuário
+        });
+    </script>
+  </body>
+</html>

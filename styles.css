@@ -1,0 +1,285 @@
+body {
+  font-family: "Poppins";
+  background-color: #333; /* Cor de fundo para contrastar */
+  color: white; /* Cor do texto */
+}
+
+.container {
+  height: 80vh;
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  gap: 5rem;
+}
+
+/*----FRONTEIRA ENTRE SETORES----*/
+.setor__1 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 500px;
+  height: 300px;
+  flex-shrink: 0;
+  background-color: #eb623e;
+}
+
+.foto-perfil {
+  position: relative;
+  display: flex;
+  margin-left: 60px;
+  margin-top: 21px;
+  width: 122px;
+  height: 122px;
+  flex-shrink: 0;
+}
+
+.circle {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 125px;
+  height: 125px;
+  z-index: 1;
+}
+
+.foto-perfil {
+  display: flex; /* Para alinhar o conteúdo, se necessário */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+}
+
+.image-container {
+  width: 120px; /* Largura do contêiner */
+  height: 120px; /* Altura do contêiner */
+  border-radius: 50%; /* Para borda arredondada */
+  overflow: hidden; /* Esconde qualquer parte da imagem que ultrapasse os limites */
+  border: 2px solid #6f01e0; /* Adiciona a borda ao contêiner */
+}
+
+.profile-image {
+  width: 100%; /* Ocupa toda a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  object-fit: cover; /* Cobre a área do contêiner */
+}
+
+.div__NSC {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+h1 {
+  margin-left: 31px;
+  margin-top: 29px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: normal;
+}
+
+h8 {
+  margin-left: 31px;
+  margin-top: -20px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 100;
+  line-height: normal;
+}
+
+hr {
+  margin-top: 9px;
+  margin-left: 30px;
+  border-radius: 66px;
+  background: #f3f0f4;
+  width: 133.5px;
+  height: 2.8px;
+  flex-shrink: 0;
+}
+
+.img__dsop {
+  margin-left: 31px;
+  width: 133.5px;
+  height: 39.147px;
+  flex-shrink: 0;
+}
+
+ul {
+  align-items: center;
+  margin-top: 16px;
+  margin-left: -150px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: normal;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+/*----FRONTEIRA ENTRE SETORES----*/
+.setor__2 {
+  gap: 27px;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 35px;
+  flex-shrink: 0;
+  background-color: #f3f0f4;
+}
+
+.div__icons {
+  display: flex;
+  align-items: center;
+  width: 27px;
+  height: 27px;
+  flex-shrink: 0;
+}
+
+/*----FRONTEIRA ENTRE SETORES----*/
+.setor__3 {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  height: 95px;
+  flex-shrink: 0;
+  background-color: #6f01e0;
+}
+
+.div__coin {
+  margin-left: 30px;
+  width: 137px;
+  height: 137px;
+  flex-shrink: 0;
+}
+
+.pre1 {
+  margin-left: 30px;
+  margin-top: 25px;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 510;
+  line-height: 22.4px; /* 140% */
+}
+
+/*----FRONTEIRA ENTRE SETORES----*/
+footer {
+  gap: 100px;
+  display: flex;
+  flex-direction: row;
+  align-content: end;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 80px;
+  flex-shrink: 0;
+  background-color: #f3f0f4;
+}
+
+.div_awards {
+  display: flex;
+  gap: 16px;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+}
+
+.iso {
+  display: flex;
+  margin-left: -150px;
+  color: #0e0e0e;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19.6px; /* 140% */
+}
+
+/* Formulário para edição */
+.form-container {
+  width: 30%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-container button {
+  padding: 10px;
+  background-color: #eb623e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input {
+  width: 100%; /* Ajusta a largura dos inputs */
+  padding: 8px; /* Espaçamento interno */
+  margin: 5px 0; /* Margem vertical */
+  border: 1px solid #ccc; /* Borda */
+  border-radius: 4px; /* Bordas arredondadas */
+  font-family: "Poppins", sans-serif; /* Fonte */
+}
+
+.cargo-container {
+  position: relative; /* Para permitir o posicionamento absoluto do hr */
+  margin-top: -15px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para o <hr /> */
+.dynamic-hr {
+  border: none;
+  height: 2px; /* Espessura da linha */
+  background-color: white; /* Cor da linha */
+  position: absolute; /* Permite que o hr seja posicionado em relação ao container */
+  top: 16px; /* Ajuste conforme necessário para alinhar com o texto */
+  transition: width 0.2s; /* Transição suave */
+}
+
+.hidden-span {
+  visibility: hidden; /* Oculta o span que mede a largura */
+  white-space: nowrap; /* Não quebra a linha */
+  position: absolute; /* Para que não afete o layout */
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+/* Estilos adicionais para melhorar a aparência */
+input {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; /* Inclui padding e border no total */
+}
